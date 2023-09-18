@@ -35,7 +35,7 @@ export default function Calculator() {
           <button className="grey">0</button>
           <button className="grey">,</button>
           <button className="grey" style={{ visibility: "hidden" }}>
-            ,
+            
           </button>
           <button className="orange">=</button>
         </div>
