@@ -4,6 +4,10 @@ import { Box, Container } from "@mui/material";
 
 export default function Calculator() {
   const[num,setNum]=useState(0);
+
+  function inputNum(valor) {
+    console.log(valor)
+  }
   return (
     <div>
       <Box m={5} />
