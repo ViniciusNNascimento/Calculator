@@ -40,10 +40,19 @@ export default function Calculator() {
     setNum(0);
   }
   function calculate() {
-    console.log("calculou!");
-    console.log(oldnum);
-    console.log(num);
-    console.log(operator);
+    if (operator === "/") {
+      setNum(parseFloat(oldnum) / parseFloat (num));
+    }
+    if (operator === "X") {
+      setNum(parseFloat(oldnum) * parseFloat(num));
+    }
+    if (operator === "-") {
+      setNum(parseFloat(oldnum) - parseFloat (num));
+    }
+    if (operator === "+") {
+      setNum(parseFloat(oldnum) + parseFloat(num));
+    }
+  
   }
 
   return (
@@ -95,10 +104,10 @@ export default function Calculator() {
           <button className="orange" onClick={operatorHandler} value="+"> 
             +
           </button>
-          <button className="grey" onClick={inputNum} value={8}>
+          <button className="grey" onClick={inputNum} value={0}>
             0
           </button>
-          <button className="grey" onClick={inputNum} value={","}>
+          <button className="grey" onClick={inputNum} value={"."}>
             ,
           </button>
           <button className="grey" style={{ visibility: "hidden" }}></button>
